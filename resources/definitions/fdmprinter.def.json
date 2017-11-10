@@ -5953,6 +5953,28 @@
                     "enabled": "resolveOrValue('jerk_enabled') and ironing_enabled",
                     "limit_to_extruder": "top_bottom_extruder_nr",
                     "settable_per_mesh": true
+                },
+                "layer_height_use_variable":
+                {
+                    "label": "Use variable layer heights",
+                    "description": "Indicate whether to use the variable layer heights or not.",
+                    "type": "bool",
+                    "default_value": false,
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "children":
+                    {
+                        "layer_height_variable_heights":
+                        {
+                            "label": "Variable layer heights",
+                            "description": "Set a list of layer heights in mm to use for slicing. The VariSlice plugin uses this field to store the output.",
+                            "type": "[int]",
+                            "default_value": "[ ]",
+                            "settable_per_mesh": false,
+                            "settable_per_extruder": false,
+                            "enabled": "layer_height_use_variable"
+                        }
+                    }
                 }
             }
         },
