@@ -5954,27 +5954,15 @@
                     "limit_to_extruder": "top_bottom_extruder_nr",
                     "settable_per_mesh": true
                 },
-                "layer_height_use_variable":
+                "adaptive_layer_height_enabled":
                 {
-                    "label": "Use variable layer heights",
-                    "description": "Indicate whether to use the variable layer heights or not.",
+                    "label": "Use adaptive layer heights",
+                    "description": "Adaptive layer heights computes the layer heights depending on the shape of the models.",
                     "type": "bool",
                     "default_value": false,
                     "settable_per_mesh": false,
                     "settable_per_extruder": false,
-                    "children":
-                    {
-                        "layer_height_variable_heights":
-                        {
-                            "label": "Variable layer heights",
-                            "description": "Set a list of layer heights in mm to use for slicing. The VariSlice plugin uses this field to store the output.",
-                            "type": "[int]",
-                            "default_value": "[ ]",
-                            "settable_per_mesh": false,
-                            "settable_per_extruder": false,
-                            "enabled": "layer_height_use_variable"
-                        }
-                    }
+                    "settable_per_meshgroup": false
                 }
             }
         },

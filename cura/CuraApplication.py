@@ -159,7 +159,6 @@ class CuraApplication(QtApplication):
         SettingDefinition.addSettingType("optional_extruder", None, str, None)
 
         SettingDefinition.addSettingType("[int]", None, str, None)
-        SettingDefinition.addSettingType("[float]", None, str, None)
 
         SettingFunction.registerOperator("extruderValues", ExtruderManager.getExtruderValues)
         SettingFunction.registerOperator("extruderValue", ExtruderManager.getExtruderValue)

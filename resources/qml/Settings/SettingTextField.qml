@@ -154,12 +154,11 @@ SettingItem
 
             selectByMouse: true;
 
-            maximumLength: (definition.type == "[int]") ? 2000 : (definition.type == "str") ? -1 : 10;
+            maximumLength: (definition.type == "[int]") ? 20 : (definition.type == "str") ? -1 : 10;
 
             validator: RegExpValidator {
                 regExp:
                     (definition.type == "[int]") ? /^\[?(\s*-?[0-9]{0,9}\s*,)*(\s*-?[0-9]{0,9})\s*\]?$/ :
-                    (definition.type == "[float]") ? /^-?[0-9]{0,9}[.,]?[0-9]{0,10}$/ :
                     (definition.type == "int") ? /^-?[0-9]{0,10}$/ :
                     (definition.type == "float") ? /^-?[0-9]{0,9}[.,]?[0-9]{0,10}$/ :
                     /^.*$/
