@@ -5931,7 +5931,6 @@
                     "settable_per_mesh": false,
                     "settable_per_extruder": false,
                     "settable_per_meshgroup": false
-<<<<<<< HEAD
                 },
                 "ironing_enabled":
                 {
@@ -6060,8 +6059,6 @@
                     "settable_per_mesh": false,
                     "settable_per_extruder": false,
                     "settable_per_meshgroup": false
-=======
->>>>>>> master
                 }
             }
         },
