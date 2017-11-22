@@ -6094,10 +6094,32 @@
                 },
                 "adaptive_layer_height_enabled":
                 {
-                    "label": "Use adaptive layer heights",
-                    "description": "Adaptive layer heights computes the layer heights depending on the shape of the models.",
+                    "label": "Use adaptive layers",
+                    "description": "Adaptive layers computes the layer heights depending on the shape of the model.",
                     "type": "bool",
                     "default_value": false,
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "settable_per_meshgroup": false
+                },
+                "adaptive_layer_height_heights":
+                {
+                    "label": "Adaptive layers allowed layer heights",
+                    "description": "A list of the allowed heights in mm.",
+                    "type": "[int]",
+                    "enabled": "adaptive_layer_height_enabled",
+                    "default_value": "[150,100,60]",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "settable_per_meshgroup": false
+                },
+                "adaptive_layer_height_threshold":
+                {
+                    "label": "Adaptive layers threshold.",
+                    "description": "Threshold whether to use a smaller layer or not. This number is compared to the tan of the steepest slope in a layer.",
+                    "type": "float",
+                    "enabled": "adaptive_layer_height_enabled",
+                    "default_value": 100.0,
                     "settable_per_mesh": false,
                     "settable_per_extruder": false,
                     "settable_per_meshgroup": false
