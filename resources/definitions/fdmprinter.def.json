@@ -6129,7 +6129,7 @@
                     "description": "The difference in height of the next layer height compared to the previous one.",
                     "type": "float",
                     "enabled": "adaptive_layer_height_enabled",
-                    "default_value": 0.02,
+                    "default_value": 0.01,
                     "settable_per_mesh": false,
                     "settable_per_extruder": false,
                     "settable_per_meshgroup": false
@@ -6140,7 +6140,7 @@
                     "description": "Threshold whether to use a smaller layer or not. This number is compared to the tan of the steepest slope in a layer.",
                     "type": "float",
                     "enabled": "adaptive_layer_height_enabled",
-                    "default_value": 100.0,
+                    "default_value": 200.0,
                     "settable_per_mesh": false,
                     "settable_per_extruder": false,
                     "settable_per_meshgroup": false
