@@ -6112,20 +6112,31 @@
                     "settable_per_extruder": false,
                     "settable_per_meshgroup": false
                 },
-                "adaptive_layer_height_heights":
+                "adaptive_layer_height_variation":
                 {
-                    "label": "Adaptive layers allowed layer heights",
-                    "description": "A list of the allowed heights in mm.",
-                    "type": "[int]",
+                    "label": "Adaptive layers maximum variation",
+                    "description": "The maximum allowed height different from the base layer height in mm.",
+                    "type": "float",
                     "enabled": "adaptive_layer_height_enabled",
-                    "default_value": "[150,100,60]",
+                    "default_value": 0.1,
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "settable_per_meshgroup": false
+                },
+                "adaptive_layer_height_variation_step":
+                {
+                    "label": "Adaptive layers variation step size",
+                    "description": "The difference in height of the next layer height compared to the previous one.",
+                    "type": "float",
+                    "enabled": "adaptive_layer_height_enabled",
+                    "default_value": 0.02,
                     "settable_per_mesh": false,
                     "settable_per_extruder": false,
                     "settable_per_meshgroup": false
                 },
                 "adaptive_layer_height_threshold":
                 {
-                    "label": "Adaptive layers threshold.",
+                    "label": "Adaptive layers threshold",
                     "description": "Threshold whether to use a smaller layer or not. This number is compared to the tan of the steepest slope in a layer.",
                     "type": "float",
                     "enabled": "adaptive_layer_height_enabled",
